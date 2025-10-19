@@ -1,0 +1,26 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Script otimizado para iniciar o bot no Termux
+# Uso: ./.termux-start
+
+echo "Iniciando TheMystic Bot MD no Termux..."
+
+# Configurar variáveis de ambiente para Termux
+export NODE_OPTIONS="--max-old-space-size=512"
+export UV_THREADPOOL_SIZE=4
+
+# Verificar se está no diretório correto
+if [ ! -f "index.js" ]; then
+    echo "Erro: Execute este script no diretório do bot!"
+    exit 1
+fi
+
+# Limpar cache se necessário
+if [ "$1" = "--clear" ]; then
+    echo "Limpando cache..."
+    rm -rf tmp/*
+    rm -rf node_modules/.cache
+fi
+
+# Iniciar bot com tratamento de erros
+node index.js 2>&1 | tee -a bot.log

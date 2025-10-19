@@ -7,8 +7,18 @@
     "bot",
     "ai",
     "maria",
-    "secretary"
+    "secretary",
+    "termux",
+    "android"
   ],
+  "homepage": "https://github.com/SpyHacke/the#readme",
+  "bugs": {
+    "url": "https://github.com/SpyHacke/the/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SpyHacke/the.git"
+  },
   "license": "MIT",
   "author": "SpyHacke",
   "type": "module",
@@ -22,6 +32,7 @@
     "fix": "node fix-bot.js",
     "setup": "node setup.js",
     "start": "node start-bot.js",
+    "termux": "bash install-termux.sh",
     "web": "next start"
   },
   "dependencies": {
