@@ -1,12 +1,28 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
-  "private": true,
+  "name": "themystic-bot-md",
+  "version": "2.0.0",
+  "description": "Bot WhatsApp com marIA - Secretária Virtual IA",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "ai",
+    "maria",
+    "secretary"
+  ],
+  "license": "MIT",
+  "author": "SpyHacke",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
+    "bot": "node index.js",
     "build": "next build",
+    "check": "node lib/system-check.js",
     "dev": "next dev",
-    "lint": "eslint .",
-    "start": "next start"
+    "diagnose": "node diagnose.js",
+    "fix": "node fix-bot.js",
+    "setup": "node setup.js",
+    "start": "node start-bot.js",
+    "web": "next start"
   },
   "dependencies": {
     "@bochilteam/scraper": "latest",
